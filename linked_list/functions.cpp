@@ -30,7 +30,7 @@ void find_length(Node* head) {
     int length = 0;
     Node* current = head;
     while (current != nullptr) {
-        length++;
+        length+=1;
         current = current->next;
     }
     std::cout << "Length of the list is " << length << std::endl;
@@ -81,3 +81,19 @@ Node* insert_at_position(Node** head, int data, int position) {
     current->next = newnode;
     return newnode;
 }
+
+Node* delete_at_beginning(Node* *head){
+    Node* newnode = *head ;
+    if(newnode == nullptr){
+        std::cout<<"\nEmpty list\n" ;
+    }
+    Node* temp = *head;
+
+    // Update the head to the next node
+    *head = (*head)->next;
+
+    // Delete the old head node
+    delete temp;
+    return newnode;
+}
+
