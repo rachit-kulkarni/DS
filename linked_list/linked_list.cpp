@@ -1,28 +1,31 @@
 #include "header.h"
 
-int main(){
-    Node* head = new Node{ 3 } ;
-    Node* second = new Node{ 4 } ;
-    Node* third = new Node{ 5 } ;
+int main() {
+    Node* head = nullptr;
 
-    head -> next = second ;
-    second -> next = third ;
-    third -> next = nullptr ;
-   
-   Node* fourth = insert_beginning ( &head , 2) ;
-   Node* fifth = insert_beginning ( &head , 1) ;
-   Node* sixth = insert_beginning ( &head , 0) ;
+    // Create nodes dynamically
+    insert_beginning(&head, 5);
+    insert_beginning(&head, 4);
+    insert_beginning(&head, 3);
+    insert_beginning(&head, 2);
+    insert_beginning(&head, 1);
+    insert_beginning(&head, 0);
 
-    find_length ( head );
-    traverse_list ( head ) ;
-    search_list_element ( head , 6);
-    delete head ; 
-    delete second ;
-    delete third ;
-    delete fourth ;
-    delete fifth ;
-    delete sixth ;
+    // Find the length of the list and traverse it
+    find_length(head);
+    traverse_list(head);
+
+    // Search for an element in the list
+    search_list_element(head, 6);
+
+    // Cleanup: free allocated memory
+    Node* current = head;
+    Node* nextNode;
+    while (current != nullptr) {
+        nextNode = current->next;
+        delete current;
+        current = nextNode;
+    }
 
     return 0;
-
 }
