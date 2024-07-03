@@ -4,14 +4,18 @@ int main() {
     Node* head = nullptr;
 
     // Create nodes dynamically and insert at the beginning
-    insert_beginning(&head,5);
-    insert_beginning(&head,7);
-    insert_beginning(&head, 8);
+ /* insert_beginning(&head, 2);
+    insert_beginning(&head, 1);
+    insert_beginning(&head, 0);*/
 
     // Insert nodes at the end
-    insert_at_end(&head, 2);
-    insert_at_end(&head, 9);
-    insert_at_end(&head, 0);
+    //insert_at_end(&head, 3);
+    //insert_at_end(&head, 4);
+   // insert_at_end(&head, 5);
+
+    // Insert at a specific position
+    insert_at_position(&head, 9, 0);
+    insert_at_position(&head, 45, 0);
 
     // Find the length of the list and traverse it
     find_length(head);

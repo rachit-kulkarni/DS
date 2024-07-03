@@ -60,3 +60,24 @@ Node* insert_at_end(Node** head, int data) {
     }
     return newnode;
 }
+
+Node* insert_at_position(Node** head, int data, int position) {
+    Node* newnode = new Node();
+    newnode->data = data;
+    newnode->next = nullptr;
+
+    if (position == 0 || *head == nullptr) {
+        newnode->next = *head;
+        *head = newnode;
+        return newnode;
+    }
+
+    Node* current = *head;
+    for (int i = 0; i < position - 1 && current->next != nullptr; ++i) {
+        current = current->next;
+    }
+
+    newnode->next = current->next;
+    current->next = newnode;
+    return newnode;
+}
