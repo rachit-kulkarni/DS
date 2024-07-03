@@ -97,3 +97,20 @@ Node* delete_at_beginning(Node* *head){
     return newnode;
 }
 
+Node* delete_at_end(Node* *head){
+    if ( *head == nullptr){
+        std::cout<<"\nEmpty List\n" ;
+    }
+    if( (*head) -> next == nullptr){
+        delete *head;
+        (*head) = nullptr;
+        return *head ;
+    }
+    Node* current = (*head);
+    while(current ->next ->next != nullptr){
+        current = current->next;
+    }
+    delete current->next;
+    current ->next = nullptr; 
+    return *head;
+}

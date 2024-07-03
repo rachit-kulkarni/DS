@@ -16,14 +16,19 @@ int main() {
     // Insert at a specific position
     insert_at_position(&head, 9, 0);
     insert_at_position(&head, 45, 0);
-    insert_at_position(&head, 65, 2);
-    insert_at_position(&head, 35, 3);
+    insert_at_position(&head, 65, 1);
+    insert_at_position(&head, 35, 2);
     std::cout<<"\nbefore deleting the list element in the beggining :\n";
     traverse_list(head);
+   /* delete_at_beginning(&head);
     delete_at_beginning(&head);
-    delete_at_beginning(&head);
-    delete_at_beginning(&head);
+    delete_at_beginning(&head);*/
     // Find the length of the list and traverse it
+    delete_at_end(&head);
+    delete_at_end(&head);
+    delete_at_end(&head);
+    //delete_at_end(&head);
+    //delete_at_end(&head);
     find_length(head);
     std::cout<<"\nafter deleting the element\n";
     traverse_list(head);

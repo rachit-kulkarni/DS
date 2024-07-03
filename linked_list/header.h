@@ -17,6 +17,8 @@ Node* insert_beginning(Node** , int );
 Node* insert_at_end(Node* * , int );
 Node* insert_at_position(Node* *, int , int);
 Node* delete_at_beginning(Node* *);
+Node* delete_at_end(Node* *);
+
 
 
 #endif // HEADER_H
