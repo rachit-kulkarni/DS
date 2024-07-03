@@ -3,13 +3,15 @@
 int main() {
     Node* head = nullptr;
 
-    // Create nodes dynamically
-    insert_beginning(&head, 5);
-    insert_beginning(&head, 4);
-    insert_beginning(&head, 3);
-    insert_beginning(&head, 2);
-    insert_beginning(&head, 1);
-    insert_beginning(&head, 0);
+    // Create nodes dynamically and insert at the beginning
+    insert_beginning(&head,5);
+    insert_beginning(&head,7);
+    insert_beginning(&head, 8);
+
+    // Insert nodes at the end
+    insert_at_end(&head, 2);
+    insert_at_end(&head, 9);
+    insert_at_end(&head, 0);
 
     // Find the length of the list and traverse it
     find_length(head);
