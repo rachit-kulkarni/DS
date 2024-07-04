@@ -15,6 +15,6 @@ int main()
     insert_at_beginning(&head, 12); 
     insert_at_beginning(&head, 1); 
     traverse_list(head);
-    std::cout << "Element at index 3 is " << GetNth(head, 5); 
+    std::cout << "Element at index 3 is " << GetNth(head, 3); 
     return 0; 
 } 

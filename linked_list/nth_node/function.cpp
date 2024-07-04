@@ -16,7 +16,7 @@ Node* insert_at_beginning(Node** head, int data) {
     (*head) = newnode;
     return newnode;
 }
-
+/*
 int GetNth(Node* head, int index){
     int count = 0;
     Node* current = head ;
@@ -27,4 +27,14 @@ int GetNth(Node* head, int index){
         current = current->next;
     }
     assert(0);
+}
+*/
+int GetNth(Node* head, int index){
+    if ( head == NULL){
+        return -1;
+    }
+    if( index == 0){
+        return head -> data ;
+    }
+    return GetNth((head->next), index-1);
 }
