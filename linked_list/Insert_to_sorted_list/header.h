@@ -1,0 +1,15 @@
+#ifndef HEADER_H
+#define HEADER_H
+
+#include <iostream>
+#include <assert.h> 
+#include <bits/stdc++.h> 
+// Node structure definition
+struct Node {
+    int data;
+    Node* next;
+};
+void traverse_list(Node* );
+Node* insert_at_beginning(Node* *, int );
+Node* insert_sorted(Node* *head, int data);
+#endif // HEADER_H
