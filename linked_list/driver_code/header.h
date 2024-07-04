@@ -11,5 +11,4 @@ struct Node {
 };
 void traverse_list(Node* );
 Node* insert_at_beginning(Node* *, int );
-int GetNth(Node* , int ) ;
 #endif // HEADER_H
